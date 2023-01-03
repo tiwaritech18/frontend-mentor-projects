@@ -1,0 +1,134 @@
+:root{
+  --clr-primary-cyan:hsl(158, 36%, 37%);
+  --clr-primary-darkcyan:hsl(158, 36%, 15%);
+  --clr-primary-cream:hsl(30, 38%, 92%);
+  --clr-neutral-darkblue:hsl(212, 21%, 14%);
+  --clr-neutral-greyishblue:hsl(228, 12%, 48%);
+  --clr-neutral-white:hsl(0, 0%, 100%);
+
+  --fw-regular:500;
+  --fw-bold:700;
+
+  --ff-accent: 'Fraunces', serif;
+  --ff-base: 'Montserrat', sans-serif;
+
+}
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+ 
+  body{
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-greyishblue);
+    font-size: 0.875rem;
+    background-color: var(--clr-primary-cream);
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+  }
+
+  .price{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+
+  }
+  .product{
+    background-color: var(--clr-neutral-white);
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  .product__content{
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+  }
+  .product__category{
+    letter-spacing: 5px;
+
+
+  }
+  .product__title{
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    color: var(--clr-neutral-darkblue);
+    line-height: 1.1;
+
+  }
+  .product__price{
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    color: var(--clr-primary-cyan);
+  }
+  .button{
+    cursor: pointer;
+    padding: .5em 1.5em;
+    border: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap:.4rem;
+    background-color: var(--clr-primary-cyan);
+    font-size: .92rem;
+    font-weight: var(--fw-bold);
+    padding: 0.75em 1.5em;
+    border-radius: .5rem;
+    color: var(--clr-neutral-white);
+
+  }
+  .button:is(:hover, :focus) {
+    background-color: var(--clr-primary-darkcyan);
+  }
+  .button::before{
+    content: "";
+    background-image: url(images/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+  }
